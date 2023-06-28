@@ -7,12 +7,12 @@ public class UsefulMethods
 {
     public static Vec3d lookDirEntity(Entity entity)
     {
-        double degrees = entity.getHeadYaw() - 90;
+        double degrees = entity.getYaw() - 90;
         double radians = Math.toRadians(degrees);
         double x = Math.cos(radians);
-        double y = Math.sin(radians);
-
-        //I can't find anything for the vertical camera
-        return new Vec3d((float) x, 0, (float) y);
+        double z = Math.sin(radians);
+        double y = entity.getPitch() / -90;
+        //I don't know if pitch works correctly
+        return new Vec3d((float) x, y, (float) z);
     }
 }

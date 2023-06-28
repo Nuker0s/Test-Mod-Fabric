@@ -10,9 +10,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import nuker0s.testmod.UsefulMethods;
 import nuker0s.testmod.sound.ModSounds;
@@ -33,6 +36,8 @@ public  class Moaiitem
         public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
             if (!world.isClient) {
                 world.playSound(null, player.getBlockPos(), ModSounds.MOAISOUND, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                
+
             }
 
             return super.use(world, player, hand);
