@@ -1,7 +1,7 @@
 # Test-Mod-Fabric
 Basic Minecraft Mod Template I made to Learn Java and Minecraft modding.
 
-I also Plan to make a Forge version.
+There is a Forge version https://github.com/Nuker0s/TestmodForge
 
 currently for Minecraft Version 1.19.3
 
